@@ -55,12 +55,24 @@ body {
   border-radius: 6px;
 }
 
-.producto:nth-child(1) .foto { background: linear-gradient(135deg, #60a5fa, #2563eb); }
-.producto:nth-child(2) .foto { background: linear-gradient(135deg, #34d399, #059669); }
-.producto:nth-child(3) .foto { background: linear-gradient(135deg, #f87171, #dc2626); }
-.producto:nth-child(4) .foto { background: linear-gradient(135deg, #fbbf24, #d97706); }
-.producto:nth-child(5) .foto { background: linear-gradient(135deg, #a78bfa, #7c3aed); }
-.producto:nth-child(6) .foto { background: linear-gradient(135deg, #f472b6, #db2777); }
+.producto:nth-child(1) .foto {
+  background: linear-gradient(135deg, #60a5fa, #2563eb);
+}
+.producto:nth-child(2) .foto {
+  background: linear-gradient(135deg, #34d399, #059669);
+}
+.producto:nth-child(3) .foto {
+  background: linear-gradient(135deg, #f87171, #dc2626);
+}
+.producto:nth-child(4) .foto {
+  background: linear-gradient(135deg, #fbbf24, #d97706);
+}
+.producto:nth-child(5) .foto {
+  background: linear-gradient(135deg, #a78bfa, #7c3aed);
+}
+.producto:nth-child(6) .foto {
+  background: linear-gradient(135deg, #f472b6, #db2777);
+}
 
 .info {
   padding: 24px;
@@ -72,7 +84,7 @@ body {
 }
 
 /* ============================================================
-   TODO 1 — Barra fija
+   TODO 1 ✅ — Barra fija
    A .barra sumale:
    - position: fixed
    - top: 0
@@ -82,16 +94,27 @@ body {
    contenido que quedó escondido detrás de ella?
    ============================================================ */
 
+.barra {
+  position: fixed; /*cambiar por sticky*/
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
 /* ============================================================
-   TODO 2 — Compensar la barra
+   TODO 2 ✅ — Compensar la barra
    Al body sumale:
    - padding-top: 64px
    Un elemento fixed sale del flujo normal: hay que hacerle
    lugar a mano.
    ============================================================ */
 
+body {
+  padding-top: 64px;
+}
+
 /* ============================================================
-   TODO 3 — El índice pegajoso
+   TODO 3 ✅ — El índice pegajoso
    A .indice dale:
    - position: sticky
    - top: 64px
@@ -101,6 +124,13 @@ body {
    y ahí se queda pegado (debajo de la barra).
    ============================================================ */
 
+.indice {
+  position: sticky;
+  top: 64px;
+  background-color: #ffd166;
+  padding: 8px 24px;
+}
+
 /* ============================================================
    TODO 4 — Ancla para la etiqueta
    A .producto sumale:
@@ -108,6 +138,10 @@ body {
    No se mueve de lugar: sirve de REFERENCIA para el hijo con
    position: absolute del TODO 5.
    ============================================================ */
+
+.producto {
+  position: relative;
+}
 
 /* ============================================================
    TODO 5 — Etiqueta de oferta flotante
@@ -122,7 +156,19 @@ body {
    Queda DENTRO del producto pero SIN ocupar lugar en el flujo.
    Probá: si le sacás el position: relative a .producto
    (TODO 4), ¿respecto de quién se posiciona la etiqueta?
-   ============================================================ */
+
+   /*del body, porque no hay ninguna etiqueta*/
+============================================================
+  */
+  .etiqueta-oferta {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background-color: #e63946;
+  color: #ffffff;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
 
 /* ============================================================
    TODO 6 — Botón volver arriba
@@ -138,3 +184,14 @@ body {
    Scrolleá y fijate qué pasa si dos elementos posicionados se
    superponen: ¿quién queda arriba? ¿Qué controla el z-index?
    ============================================================ */
+
+.subir {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  background-color: #1d1d2b;
+  color: #ffffff;
+  padding: 10px 14px;
+  border-radius: 10;
+  z-index: 10; /*controla quien queda arriba y quien abajo */
+}
