@@ -41,12 +41,24 @@ body {
   border-radius: 50%;
 }
 
-.plato:nth-child(1) .emoji { background-color: #dc2626; }
-.plato:nth-child(2) .emoji { background-color: #ea580c; }
-.plato:nth-child(3) .emoji { background-color: #16a34a; }
-.plato:nth-child(4) .emoji { background-color: #2563eb; }
-.plato:nth-child(5) .emoji { background-color: #ca8a04; }
-.plato:nth-child(6) .emoji { background-color: #7c3aed; }
+.plato:nth-child(1) .emoji {
+  background-color: #dc2626;
+}
+.plato:nth-child(2) .emoji {
+  background-color: #ea580c;
+}
+.plato:nth-child(3) .emoji {
+  background-color: #16a34a;
+}
+.plato:nth-child(4) .emoji {
+  background-color: #2563eb;
+}
+.plato:nth-child(5) .emoji {
+  background-color: #ca8a04;
+}
+.plato:nth-child(6) .emoji {
+  background-color: #7c3aed;
+}
 
 .plato h2 {
   font-size: 18px;
@@ -57,7 +69,7 @@ body {
 }
 
 /* ============================================================
-   TODO 1 — La barra
+   TODO 1 ✅ — La barra
    A .barra dale:
    - display: flex
    - justify-content: space-between   logo de un lado, links del otro
@@ -67,15 +79,29 @@ body {
    - color: #f5e6d3
    ============================================================ */
 
+.barra {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px;
+  background-color: #292018;
+  color: #f5e6d3;
+}
+
 /* ============================================================
-   TODO 2 — Los links
+   TODO 2 ✅  — Los links
    A .links dale:
    - display: flex
    - gap: 16px
    ============================================================ */
 
+.links {
+  display: flex;
+  gap: 16px; /*separacion entre items, no considera los bordes*/
+}
+
 /* ============================================================
-   TODO 3 — La fila de platos
+   TODO 3 ✅ — La fila de platos
    A .platos dale:
    - display: flex
    - flex-wrap: wrap         si no entran, bajan a la fila siguiente
@@ -84,8 +110,16 @@ body {
    - padding: 24px
    ============================================================ */
 
+.platos {
+  display: flex;
+  flex-wrap: wrap; /*si los elementos no entrn, van a la siguiente linea*/
+  justify-content: center;
+  gap: 16px;
+  padding: 24px;
+}
+
 /* ============================================================
-   TODO 4 — Cada tarjeta, de arriba hacia abajo
+   TODO 4 ✅ — Cada tarjeta, de arriba hacia abajo
    A .plato dale:
    - display: flex
    - flex-direction: column
@@ -97,16 +131,33 @@ body {
    - width: 200px
    ============================================================ */
 
+.plato {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff;
+  border: 1px solid #e5d5c5;
+  border-radius: 8px;
+  padding: 16px;
+  width: 200px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
 /* ============================================================
-   TODO 5 — La tarjeta vip
+   TODO 5 ✅ — La tarjeta vip
    A .destacado dale:
    - align-self: center
    Probá también flex-start y flex-end: ¿qué cambia en su
    altura respecto de las tarjetas de su misma fila?
    ============================================================ */
 
+.destacado {
+  align-self: center;
+}
+
 /* ============================================================
-   TODO 6 — El pie repartido
+   TODO 6 ✅ — El pie repartido
    A .pie dale:
    - display: flex
    - justify-content: space-around
@@ -114,6 +165,14 @@ body {
    - background-color: #292018
    - color: #f5e6d3
    ============================================================ */
+
+.pie {
+  display: flex;
+  justify-content: space-around; /*deja espacios a la izquierda y a la derecha*/
+  padding: 16px;
+  background-color: #292018;
+  color: #f5e6d3;
+}
 
 /* ============================================================
     PARA EXPERIMENTAR
