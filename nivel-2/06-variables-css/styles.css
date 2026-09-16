@@ -29,11 +29,17 @@
    ============================================================ */
 
 :root {
+  /*pseudoclase de uso global*/
   --color-primario: #2f6b3a;
   --color-fondo: #f4f7f2;
   --color-texto: #22301f;
   --color-texto-suave: #6f7d6a;
-  --espacio: 16;
+  --espacio: 16; /*le falta los pixeles*/
+  /*
+  --color acento #e08e08;
+  --radio: 10px;
+
+  */
 }
 
 * {
@@ -81,7 +87,7 @@ body {
 }
 
 .detalle {
-  color: var(--texto-suave);
+  color: var(--texto-suave); /*color-textosuave*/
   font-size: 0.9rem;
 }
 
