@@ -33,13 +33,13 @@
   --color-texto: #1f2933;
   --color-suave: #64748b;
   --espacio: 16px;
-  /*--color-marca: blue;*/
+  /*--color-marca: blue;  */
 }
 
 * {
   margin: 0;
   padding: 0;
-  box-sizing: content-box; /*border box*/
+  box-sizing: content-box; /*border box en lugar de content box*/
 }
 
 body {
