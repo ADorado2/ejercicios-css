@@ -33,12 +33,13 @@
   --color-texto: #1f2933;
   --color-suave: #64748b;
   --espacio: 16px;
+  /*--color-marca: blue;*/
 }
 
 * {
   margin: 0;
   padding: 0;
-  box-sizing: content-box;
+  box-sizing: content-box; /*border box*/
 }
 
 body {
@@ -48,6 +49,7 @@ body {
 }
 
 .barra {
+  /*display: flex*/
   justify-content: space-between;
   align-items: center;
   padding: 16px 24px;
@@ -86,6 +88,7 @@ body {
   border-radius: 12px;
   padding: 20px;
   margin-bottom: 20px;
+  /*position: relative*/
 }
 
 .banda {
@@ -112,7 +115,7 @@ body {
 }
 
 .destacada h1 {
-  font-size: clamp(2rem, 3vw, 1.4rem);
+  font-size: clamp(2rem, 3vw, 1.4rem); /*invertir min y max*/
   margin-bottom: 8px;
 }
 
@@ -122,11 +125,12 @@ body {
 
 .notas {
   display: flex;
+  /*flex-wrap: wrap;*/
   gap: 16px;
 }
 
 .nota {
-  flex: 1 1 calc(33.333%-16px);
+  flex: 1 1 calc(33.333%-16px); /*agregar espacios entre el menos*/
   min-width: 240px;
   background-color: #ffffff;
   border: 1px solid #e2e8f0;
@@ -140,9 +144,15 @@ body {
   margin-bottom: 12px;
 }
 
-.nota:nth-child(1) .foto-mini { background: linear-gradient(135deg, #059669, #6ee7b7); }
-.nota:nth-child(2) .foto-mini { background: linear-gradient(135deg, #b45309, #fcd34d); }
-.nota:nth-child(3) .foto-mini { background: linear-gradient(135deg, #6d28d9, #c4b5fd); }
+.nota:nth-child(1) .foto-mini {
+  background: linear-gradient(135deg, #059669, #6ee7b7);
+}
+.nota:nth-child(2) .foto-mini {
+  background: linear-gradient(135deg, #b45309, #fcd34d);
+}
+.nota:nth-child(3) .foto-mini {
+  background: linear-gradient(135deg, #6d28d9, #c4b5fd);
+}
 
 .nota h2 {
   font-size: 1.05rem;
@@ -161,6 +171,7 @@ body {
 }
 
 @media (min-width: 700px) {
+  /*en lugar de min va max*/
   .barra {
     flex-direction: column;
     gap: 8px;
