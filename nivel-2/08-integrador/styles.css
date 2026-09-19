@@ -33,13 +33,14 @@
   --color-texto: #1f2933;
   --color-suave: #64748b;
   --espacio: 16px;
-  /*--color-marca: blue;  */
+  /*--color-marca: blue;  nuevo push desde PC escritorio*/
 }
 
 * {
   margin: 0;
   padding: 0;
-  box-sizing: content-box; /*border box en lugar de content box*/
+  box-sizing: content-box;
+  /*border box en lugar de content box*/
 }
 
 body {
@@ -115,7 +116,8 @@ body {
 }
 
 .destacada h1 {
-  font-size: clamp(2rem, 3vw, 1.4rem); /*invertir min y max*/
+  font-size: clamp(2rem, 3vw, 1.4rem);
+  /*invertir min y max*/
   margin-bottom: 8px;
 }
 
@@ -130,7 +132,8 @@ body {
 }
 
 .nota {
-  flex: 1 1 calc(33.333%-16px); /*agregar espacios entre el menos*/
+  flex: 1 1 calc(33.333%-16px);
+  /*agregar espacios entre el menos*/
   min-width: 240px;
   background-color: #ffffff;
   border: 1px solid #e2e8f0;
@@ -147,9 +150,11 @@ body {
 .nota:nth-child(1) .foto-mini {
   background: linear-gradient(135deg, #059669, #6ee7b7);
 }
+
 .nota:nth-child(2) .foto-mini {
   background: linear-gradient(135deg, #b45309, #fcd34d);
 }
+
 .nota:nth-child(3) .foto-mini {
   background: linear-gradient(135deg, #6d28d9, #c4b5fd);
 }
@@ -171,6 +176,7 @@ body {
 }
 
 @media (min-width: 700px) {
+
   /*en lugar de min va max*/
   .barra {
     flex-direction: column;
